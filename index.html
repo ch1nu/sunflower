@@ -14,245 +14,259 @@
 
   <style>
     *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body{
-      overflow-x:hidden;
-      font-family:'Poppins',sans-serif;
-      background:#07111f;
-      color:white;
-    }
+body{
+  overflow-x:hidden;
+  font-family:'Poppins',sans-serif;
+  background:#07111f;
+  color:white;
+}
 
-    section{
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      flex-direction:column;
-      position:relative;
-      padding:40px 20px;
-    }
+section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  position:relative;
+  padding:40px 20px;
+}
 
-    /* ---------- STARS ---------- */
+/* ---------- STARS ---------- */
 
-    .stars{
-      position:fixed;
-      width:100%;
-      height:100%;
-      top:0;
-      left:0;
-      z-index:-2;
-      overflow:hidden;
-    }
+.stars{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:-2;
+  overflow:hidden;
+}
 
-    .star{
-      position:absolute;
-      width:2px;
-      height:2px;
-      background:white;
-      border-radius:50%;
-      animation:twinkle 3s infinite ease-in-out;
-    }
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:white;
+  border-radius:50%;
+  animation:twinkle 3s infinite ease-in-out;
+}
 
-    @keyframes twinkle{
-      0%,100%{
-        opacity:0.2;
-      }
-      50%{
-        opacity:1;
-      }
-    }
+@keyframes twinkle{
+  0%,100%{
+    opacity:0.2;
+  }
+  50%{
+    opacity:1;
+  }
+}
 
-    /* ---------- HERO ---------- */
+/* ---------- HERO ---------- */
 
-    .hero h1{
-      font-size:4rem;
-      text-align:center;
-      margin-bottom:20px;
-      color:#FFD54F;
-    }
+.hero h1{
+  font-size:4rem;
+  text-align:center;
+  margin-bottom:20px;
+  color:#FFD54F;
+}
 
-    .hero p{
-      font-size:1.2rem;
-      opacity:0.8;
-    }
+.hero p{
+  font-size:1.2rem;
+  opacity:0.8;
+}
 
-    .scroll{
-      position:absolute;
-      bottom:30px;
-      animation:float 2s infinite;
-      font-size:0.9rem;
-      opacity:0.7;
-    }
+.scroll{
+  position:absolute;
+  bottom:30px;
+  animation:float 2s infinite;
+  font-size:0.9rem;
+  opacity:0.7;
+}
 
-    @keyframes float{
-      0%,100%{
-        transform:translateY(0px);
-      }
-      50%{
-        transform:translateY(10px);
-      }
-    }
+@keyframes float{
+  0%,100%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(10px);
+  }
+}
 
-    /* ---------- SUNFLOWERS ---------- */
+/* ---------- SUNFLOWERS ---------- */
 
-    .sunflower-field{
-      position:absolute;
-      bottom:0;
-      width:100%;
-      display:flex;
-      justify-content:space-around;
-      align-items:flex-end;
-      padding-bottom:20px;
-      z-index:-1;
-    }
+.sunflower-field{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-end;
+  padding-bottom:20px;
+  z-index:-1;
+}
 
-    .sunflower{
-      font-size:5rem;
-      animation:sway 4s infinite ease-in-out;
-      transform-origin:bottom center;
-    }
+.sunflower{
+  font-size:5rem;
+  animation:sway 4s infinite ease-in-out;
+  transform-origin:bottom center;
+}
 
-    .sunflower:nth-child(2){
-      animation-delay:1s;
-    }
+.sunflower:nth-child(2){
+  animation-delay:1s;
+}
 
-    .sunflower:nth-child(3){
-      animation-delay:2s;
-    }
+.sunflower:nth-child(3){
+  animation-delay:2s;
+}
 
-    .sunflower:nth-child(4){
-      animation-delay:1.5s;
-    }
+.sunflower:nth-child(4){
+  animation-delay:1.5s;
+}
 
-    @keyframes sway{
-      0%,100%{
-        transform:rotate(-3deg);
-      }
-      50%{
-        transform:rotate(3deg);
-      }
-    }
+@keyframes sway{
+  0%,100%{
+    transform:rotate(-3deg);
+  }
+  50%{
+    transform:rotate(3deg);
+  }
+}
 
-    /* ---------- LETTER ---------- */
+/* ---------- LETTER ---------- */
 
-    .letter{
-      max-width:800px;
-      text-align:center;
-    }
+.letter{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+}
 
-    .typing{
-      font-size:1.4rem;
-      line-height:2.2rem;
-      color:#fff8dc;
-      min-height:250px;
-    }
+.typing{
+  width:100%;
+  max-width:700px;
+  margin:auto;
 
-    .cursor{
-      display:inline-block;
-      width:2px;
-      background:white;
-      animation:blink 1s infinite;
-    }
+  font-size:1.4rem;
+  line-height:2.2rem;
+  color:#fff8dc;
 
-    @keyframes blink{
-      50%{
-        opacity:0;
-      }
-    }
+  text-align:center;
+  white-space:pre-line;
+}
 
-    /* ---------- MEMORIES ---------- */
+/* ---------- CURSOR ---------- */
 
-    .memories{
-      display:flex;
-      flex-wrap:wrap;
-      gap:30px;
-      justify-content:center;
-      margin-top:40px;
-    }
+.cursor{
+  display:inline-block;
+  width:2px;
+  background:white;
+  animation:blink 1s infinite;
+}
 
-    .card{
-      width:250px;
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(8px);
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius:20px;
-      padding:20px;
-      transition:0.4s;
-      transform:rotate(-2deg);
-    }
+@keyframes blink{
+  50%{
+    opacity:0;
+  }
+}
 
-    .card:hover{
-      transform:translateY(-10px) rotate(0deg);
-      background:rgba(255,255,255,0.12);
-    }
+/* ---------- MEMORIES ---------- */
 
-    .card h3{
-      color:#FFD54F;
-      margin-bottom:10px;
-    }
+.memories{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:center;
+  margin-top:40px;
+}
 
-    .card p{
-      font-size:0.95rem;
-      line-height:1.5rem;
-      opacity:0.9;
-    }
+.card{
+  width:250px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px;
+  padding:20px;
+  transition:0.4s;
+  transform:rotate(-2deg);
+}
 
-    /* ---------- FINAL ---------- */
+.card:hover{
+  transform:translateY(-10px) rotate(0deg);
+  background:rgba(255,255,255,0.12);
+}
 
-    .final h2{
-      font-size:4rem;
-      color:#FFD54F;
-      margin-bottom:20px;
-      text-align:center;
-    }
+.card h3{
+  color:#FFD54F;
+  margin-bottom:10px;
+}
 
-    .final p{
-      font-size:1.3rem;
-      max-width:700px;
-      text-align:center;
-      line-height:2rem;
-      color:#fff8dc;
-    }
+.card p{
+  font-size:0.95rem;
+  line-height:1.5rem;
+  opacity:0.9;
+}
 
-    .heart{
-      margin-top:30px;
-      font-size:3rem;
-      animation:pulse 1.5s infinite;
-    }
+/* ---------- FINAL ---------- */
 
-    @keyframes pulse{
-      0%,100%{
-        transform:scale(1);
-      }
-      50%{
-        transform:scale(1.2);
-      }
-    }
+.final h2{
+  font-size:4rem;
+  color:#FFD54F;
+  margin-bottom:20px;
+  text-align:center;
+}
 
-    /* ---------- MOBILE ---------- */
+.final p{
+  font-size:1.3rem;
+  max-width:700px;
+  text-align:center;
+  line-height:2rem;
+  color:#fff8dc;
+}
 
-    @media(max-width:768px){
+.heart{
+  margin-top:30px;
+  font-size:3rem;
+  animation:pulse 1.5s infinite;
+}
 
-      .hero h1{
-        font-size:2.5rem;
-      }
+@keyframes pulse{
+  0%,100%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(1.2);
+  }
+}
 
-      .typing{
-        font-size:1.1rem;
-      }
+/* ---------- MOBILE ---------- */
 
-      .final h2{
-        font-size:2.5rem;
-      }
+@media(max-width:768px){
 
-      .sunflower{
-        font-size:3rem;
-      }
-    }
+  .hero h1{
+    font-size:2.5rem;
+  }
+
+  .typing{
+    font-size:1.1rem;
+    line-height:2rem;
+    padding:0 10px;
+  }
+
+  .final h2{
+    font-size:2.5rem;
+  }
+
+  .sunflower{
+    font-size:3rem;
+  }
+}
 
   </style>
 </head>
@@ -265,7 +279,7 @@
 
   <section class="hero">
     <h1>Happy Birthday 🌻</h1>
-    <p>For the brightest person I know.</p>
+    <p>For the drunkard i know.</p>
 
     <div class="scroll">
       scroll slowly ↓
@@ -300,25 +314,26 @@
       <div class="card">
         <h3>The First Chaos</h3>
         <p>
-          Somehow we went from strangers
-          to sharing the dumbest conversations
-          ever and honestly that was iconic.
+          Somehow we went from being classmates who talked barely
+          to having conversations almost everyday,
+          and honestly i am really glad that happened.
         </p>
       </div>
 
       <div class="card">
         <h3>Your Energy</h3>
         <p>
-          You have this weird talent of making
-          even the most boring days feel nice.
+          You have this weird talent. Yeah that's it.
+          
         </p>
       </div>
 
       <div class="card">
         <h3>Sunflower Person</h3>
         <p>
-          You genuinely radiate sunflower energy.
-          Warm, comforting and impossible to ignore.
+          I don't know why you like sunflower, you radiate energy opposite that of a sunflower but all good.
+          
+          
         </p>
       </div>
 
@@ -334,7 +349,7 @@
 
     <p>
       Thank you for existing, for being you,
-      and for making life brighter for the people around you.
+      
       I hope this year gives you every happiness you deserve.
     </p>
 
@@ -349,20 +364,24 @@
     // ---------- TYPING MESSAGE ----------
 
     const message = `
-Hey [HER NAME],
+Hey eeshaani,
 
-I honestly don’t think you realize how special you are.
 
-You make people feel comfortable,
-you make moments memorable,
-and somehow you make life feel lighter just by being around.
+
+You make people feel comfortable, not me tho, but you know what i mean. 
+You make moments memorable,
+and somehow you make life feel lighter just by being around. sorry, NOT. ok im kidding really.
 
 I know this website isn't much,
-but I wanted to make something that feels personal —
-something you can come back to and smile at.
+but i wanted to make something that feels personal,
+something you can come back to and smile at, sorry i forgot you shouldn't tell a girl to smile.
 
+I know the last year was tough, but you handled it with so much strength and grace,
+or atleast tried to. I'm really proud of you for that. I hope this year brings you more joy, more laughter,
+and maybe a little less chaos (but knowing you, probably not) and i will be right here waiting to listen to all the
+tea you have. You deserve all the good things in the world and i hope you realize that yourself.
 So here’s your tiny little corner on the internet,
-made only for you.
+made only for you. Can't wait for you to come back so i can ignore you and be busy. love you, you will always be in my h... ok too far sorry bye.
 
 Happy Birthday 🌻
 `;
